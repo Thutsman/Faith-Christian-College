@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-display: 'Playfair Display', Georgia, serif;
+  }
   html {
     scroll-behavior: smooth;
   }

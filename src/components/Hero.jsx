@@ -23,6 +23,16 @@ export default function Hero() {
       <div className="relative z-10 section-container w-full pt-28 pb-20">
         <div className="max-w-2xl">
 
+          {/* College name — clearly visible on landing */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-gold font-display font-bold text-2xl sm:text-3xl tracking-[0.2em] mb-6"
+          >
+            FAITH CHRISTIAN COLLEGE
+          </motion.p>
+
           {/* Live badge */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

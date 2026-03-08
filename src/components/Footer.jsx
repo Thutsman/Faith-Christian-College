@@ -28,13 +28,14 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.svg"
                 alt="Faith Christian College"
-                className="h-16 w-16 object-contain rounded-full ring-2 ring-gold/35"
+                className="h-20 w-20 object-contain rounded-full ring-2 ring-gold/35"
               />
               <div>
-                <h3 className="font-bold text-xl text-white leading-tight">Faith Christian</h3>
-                <p className="text-gold text-xs tracking-[0.2em] uppercase">College</p>
+                <h3 className="font-bold text-xl text-white leading-tight tracking-wide font-display">
+                  FAITH CHRISTIAN COLLEGE
+                </h3>
               </div>
             </div>
             <p className="text-white/55 text-sm leading-relaxed mb-6">

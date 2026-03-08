@@ -38,14 +38,15 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
           <div className="relative">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.svg"
               alt="Faith Christian College"
-              className="h-11 w-11 object-contain rounded-full ring-2 ring-gold/40 group-hover:ring-gold transition-all duration-300"
+              className="h-14 w-14 object-contain rounded-full ring-2 ring-gold/40 group-hover:ring-gold transition-all duration-300"
             />
           </div>
           <div className="leading-tight">
-            <p className="font-bold text-white text-sm">Faith Christian</p>
-            <p className="text-gold text-[10px] tracking-[0.2em] uppercase font-medium">College</p>
+            <p className="font-bold text-white text-lg tracking-wide font-display">
+              FAITH CHRISTIAN COLLEGE
+            </p>
           </div>
         </Link>
 
