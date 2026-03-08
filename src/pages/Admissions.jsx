@@ -31,7 +31,7 @@ const FEE_TABLE = [
     level: 'Boarding',
     reg: '—',
     uniform: '—',
-    fees: 'Contact us',
+    fees: '$690 / term',
     levy: '—',
   },
 ]
@@ -203,16 +203,23 @@ export default function Admissions() {
               aria-hidden="true"
             />
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ type: 'tween', duration: 0.2 }}
-              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg max-h-[90vh]
-                         overflow-y-auto bg-white rounded-2xl shadow-2xl z-50 mx-4"
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby="level-modal-title"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
+              aria-hidden="true"
             >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                transition={{ type: 'tween', duration: 0.2 }}
+                onClick={(e) => e.stopPropagation()}
+                className="w-full max-w-lg max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl pointer-events-auto"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="level-modal-title"
+              >
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <h3 id="level-modal-title" className="text-xl font-bold text-navy">
@@ -244,6 +251,7 @@ export default function Admissions() {
                   {LEVEL_CARD_DETAILS[modalCard].body}
                 </p>
               </div>
+              </motion.div>
             </motion.div>
           </>
         )}
