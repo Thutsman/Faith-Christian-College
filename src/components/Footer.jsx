@@ -33,12 +33,12 @@ export default function Footer() {
                 className="h-20 w-20 object-contain rounded-full ring-2 ring-gold/35"
               />
               <div>
-                <h3 className="font-bold text-xl text-white leading-tight tracking-wide font-display">
-                  FAITH CHRISTIAN COLLEGE
+                <h3 className="font-display font-semibold text-xl text-white leading-tight tracking-[0.18em] uppercase">
+                  Faith Christian College
                 </h3>
               </div>
             </div>
-            <p className="text-white/55 text-sm leading-relaxed mb-6">
+            <p className="font-sans text-white/55 text-sm leading-relaxed mb-6">
               Nurturing excellence through faith, academic achievement, and holistic character
               formation in Bulawayo, Zimbabwe.
             </p>

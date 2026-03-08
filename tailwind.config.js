@@ -52,8 +52,10 @@ export default {
         },
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
         display: ['Playfair Display', 'Georgia', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
       animation: {
         'bounce-slow': 'bounce 2.5s infinite',

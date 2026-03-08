@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ChevronDown, ArrowRight } from 'lucide-react'
+import { ChevronDown, ArrowRight, BookOpen, Truck, Home as HomeIcon, CheckCircle } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -12,8 +12,13 @@ export default function Hero() {
         style={{ backgroundImage: "url('/images/hero.jpg')" }}
       />
 
+      {/* Left-to-right gradient overlay for text readability */}
+      <div className="absolute inset-0"
+           style={{
+             background: 'linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.75) 40%, rgba(15,23,42,0.2) 70%, rgba(15,23,42,0) 100%)'
+           }} />
+
       {/* Layered gradients: navy left + dark bottom */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/75 to-navy/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-navy/20" />
 
       {/* Decorative gold accent line */}
@@ -23,12 +28,15 @@ export default function Hero() {
       <div className="relative z-10 section-container w-full pt-28 pb-20">
         <div className="max-w-2xl">
 
-          {/* College name — clearly visible on landing */}
+          {/* College name — large, elegant, uppercase, strong contrast */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gold font-display font-bold text-2xl sm:text-3xl tracking-[0.2em] mb-6"
+            className="font-display font-semibold text-4xl sm:text-5xl lg:text-6xl text-white uppercase
+                       tracking-wide sm:tracking-normal mb-6
+                       drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+            style={{ textShadow: '0 2px 12px rgba(0,0,0,0.35), 0 0 1px rgba(0,0,0,0.5)' }}
           >
             FAITH CHRISTIAN COLLEGE
           </motion.p>
@@ -39,60 +47,73 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="inline-flex items-center gap-2.5 bg-gold/15 border border-gold/40 text-gold
-                       text-xs font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-sm uppercase tracking-wider"
+                       text-xs font-semibold px-4 py-2 rounded-full mb-8 backdrop-blur-sm uppercase tracking-wider font-heading"
           >
             <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
             2026 Intake Now Open — Limited Places
           </motion.div>
 
-          {/* Heading */}
+          {/* Heading — Poppins, increased letter spacing */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.5 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6"
+            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white
+                       leading-[1.05] mb-6 tracking-wide"
+            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}
           >
             Shaping
-            <span className="block text-gold drop-shadow-lg">Champions</span>
-            <span className="block text-white/90 text-4xl sm:text-5xl font-bold mt-1">
+            <span className="block text-gold drop-shadow-lg mt-1">Champions</span>
+            <span className="block text-white/95 text-4xl sm:text-5xl font-bold mt-1">
               Through Faith
             </span>
           </motion.h1>
 
-          {/* Subtext */}
+          {/* Subtext — UI, Poppins */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.75 }}
-            className="text-xl text-white/75 mb-4 tracking-widest font-light"
+            className="font-heading text-xl text-white/85 mb-4 tracking-widest font-medium"
           >
             Preschool &bull; Primary &bull; High School
           </motion.p>
 
+          {/* Paragraph — Inter */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.85 }}
-            className="text-white/60 text-base leading-relaxed max-w-lg mb-10"
+            className="font-sans text-white/90 text-base sm:text-lg leading-relaxed max-w-lg mb-10"
+            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.25)' }}
           >
             A premier Christian academy in Bulawayo offering Cambridge &amp; ZIMSEC curricula,
             boarding facilities, transport, and reduced fees for 2026.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.7, delay: 0.95 }}
+            className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 text-white text-base font-heading justify-center text-left sm:text-center"
           >
-            <Link to="/admissions" className="btn-primary flex items-center justify-center gap-2 text-base px-10 py-4">
-              Apply Now
-              <ArrowRight size={18} />
-            </Link>
-            <Link to="/contact" className="btn-outline-gold text-base px-10 py-4">
-              Contact Us
-            </Link>
+            <span className="flex items-center justify-start sm:justify-center gap-2">
+              <BookOpen size={20} className="text-gold flex-shrink-0" />
+              Cambridge Curriculum
+            </span>
+            <span className="flex items-center justify-start sm:justify-center gap-2">
+              <CheckCircle size={20} className="text-gold flex-shrink-0" />
+              ZIMSEC Registered
+            </span>
+            <span className="flex items-center justify-start sm:justify-center gap-2">
+              <HomeIcon size={20} className="text-gold flex-shrink-0" />
+              Boarding Facilities
+            </span>
+            <span className="flex items-center justify-start sm:justify-center gap-2">
+              <Truck size={20} className="text-gold flex-shrink-0" />
+              School Transport
+            </span>
           </motion.div>
 
           {/* Stats row */}

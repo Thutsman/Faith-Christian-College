@@ -24,10 +24,10 @@ export default function FeatureCard({ icon: Icon, title, description, index = 0 
       {/* Gold accent line */}
       <div className="w-8 h-0.5 bg-gold/40 rounded-full mb-4 group-hover:w-16 transition-all duration-300" />
 
-      <h3 className="font-bold text-navy text-lg mb-2 group-hover:text-crimson transition-colors duration-300">
+      <h3 className="font-heading font-bold text-navy text-lg mb-2 group-hover:text-crimson transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
+      <p className="font-sans text-gray-500 text-sm leading-relaxed">{description}</p>
     </motion.div>
   )
 }

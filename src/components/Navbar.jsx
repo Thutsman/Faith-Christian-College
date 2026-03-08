@@ -28,8 +28,8 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-navy/97 backdrop-blur-md shadow-2xl py-2' : 'bg-transparent py-5'
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 backdrop-blur-md ${
+        scrolled ? 'bg-navy/80 shadow-2xl py-2' : 'bg-navy/60 py-5'
       }`}
     >
       <div className="section-container flex items-center justify-between">
@@ -44,8 +44,8 @@ export default function Navbar() {
             />
           </div>
           <div className="leading-tight">
-            <p className="font-bold text-white text-lg tracking-wide font-display">
-              FAITH CHRISTIAN COLLEGE
+            <p className="font-display font-semibold text-white text-base sm:text-lg tracking-[0.18em] uppercase">
+              Faith Christian College
             </p>
           </div>
         </Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-medium transition-colors duration-300 relative group ${
+                className={`font-heading text-sm font-medium transition-colors duration-300 relative group ${
                   active ? 'text-gold' : 'text-white/85 hover:text-white'
                 }`}
               >

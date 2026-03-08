@@ -92,12 +92,12 @@ export default function Home() {
                 Excellence Through
                 <span className="block text-crimson">Faith &amp; Learning</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-5">
+              <p className="font-sans text-gray-600 leading-relaxed mb-5">
                 Faith Christian College is a premier educational institution in the heart of Bulawayo,
                 Zimbabwe. From ECD through to A Level, we combine rigorous academics with strong
                 Christian values that shape character, integrity, and purpose.
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="font-sans text-gray-600 leading-relaxed mb-8">
                 Our experienced faculty, modern facilities, and commitment to both Cambridge International
                 and ZIMSEC curricula ensure every graduate is equipped for success in a rapidly evolving world.
               </p>
@@ -138,7 +138,7 @@ export default function Home() {
             <h2 className="section-title mt-2">
               The Faith Christian<span className="text-crimson"> Advantage</span>
             </h2>
-            <p className="section-subtitle max-w-2xl mx-auto">
+            <p className="section-subtitle max-w-2xl mx-auto font-sans">
               Discover why families across Bulawayo trust Faith Christian College
               for their children's education and future.
             </p>
@@ -195,12 +195,12 @@ export default function Home() {
               Limited Places Available — Apply Early
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
               Secure Your Child's
               <span className="block text-gold mt-1">Future Today</span>
             </h2>
 
-            <p className="text-white/65 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+            <p className="font-sans text-white/80 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
               Join the Faith Christian College family. Apply now before places run out
               for the 2026 academic year.
             </p>
